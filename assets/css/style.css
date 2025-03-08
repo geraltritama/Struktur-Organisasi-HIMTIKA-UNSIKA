@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	overflow-x: hidden;
 	line-height: 1;
 }
 ol, ul, li {
@@ -1277,10 +1278,11 @@ footer {
 @media (max-width: 480px) {
 /* start parallax */
 	.paralax-wrapper {
-		height: 380px;
+		top: 300px;
+		height: 480px;
 	}
     .paralax {
-		margin-top: -50px;
+		margin-top: -10px auto;
         height: 240px;
 		overflow: hidden;
     }
@@ -1318,22 +1320,23 @@ footer {
 
     .heading h1 {
         font-size: 25px;
+		bottom: 20px;
     }
 
     .heading .logosinergi {
-        width: 90%;
+        width: 100%;
         top: 30px;
         margin-top: -80px;
     }
 
     .heading .cahaya {
-        width: 50%;
-        top: 50px;
+        width: 70%;
+        top: 90px;
     }
 
     .pengurus {
-        width: 90%;
-        top: 15px;
+        width: 104%;
+        top: 50px;
     }
 
     .heading .overlay {
@@ -1341,7 +1344,7 @@ footer {
         position: relative;
         width: 3;
         right: 100px;
-        bottom: 87px;
+        bottom: 50px;
         height: 100px;
     }
 /* end parakax */
@@ -1364,7 +1367,7 @@ footer {
 
 .card-3d .figuremain h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.7em;
     text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
 }
 
@@ -1383,8 +1386,8 @@ figure .text-overlay {
 
 figure img {
         grid-area: 1/1;
-        width: 270px;
-        height: 170px;
+        width: 250px;
+        height: 150px;
         margin-left: -50px;
         filter: contrast(.8) brightness(.7);
         place-self: end center;
@@ -1395,8 +1398,8 @@ figure img {
 
 figure:hover img {
     grid-area: 1/1;
-    width: 290px;
-    height: 190px;
+    width: 270px;
+    height: 170px;
     margin-left: -60px;
     filter: contrast(.8) brightness(.7);
     place-self: end center;
@@ -1476,8 +1479,8 @@ figure:before {
         filter: brightness(.9);
         transition: .5s;
         border-radius: 100px;
-        right: -58px;
-        left: -60px;
+        right: -30px;
+        left: -50px;
         top: 90px;
         bottom: 55px;
         background-color: white;

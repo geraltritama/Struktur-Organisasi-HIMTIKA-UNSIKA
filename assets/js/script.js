@@ -103,7 +103,7 @@ $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
     $('.heading-paralax').css({
-        'transform' : 'translate(0px, '+ wScroll +'%)'
+        'transform' : 'translate(0px, '+ (wScroll * 3) +'%)'
     })
    console.log(wScroll); 
 });
