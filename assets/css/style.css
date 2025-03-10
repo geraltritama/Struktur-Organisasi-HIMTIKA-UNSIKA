@@ -1016,7 +1016,7 @@ figure:before {
     left: -190px;
     top: 110px;
     bottom: 58px;
-    background-color: white;
+    background-color: #ffffff;
 }
   
 
@@ -1032,8 +1032,8 @@ figure img {
 }
 
 figure:hover img {
-    width: 220%;
-    height: 120%;
+    width: 210%;
+    height: 110%;
     filter: contrast(1) brightness(1);
 }
 
@@ -1269,8 +1269,6 @@ footer {
     .paralax {
         height: 400px;
     }
-    
-
 }
 
 
@@ -1299,7 +1297,7 @@ footer {
     .elipse .elipse2 {
         width: 40px;
         top: 45px;
-        left: 300px;
+        left: 285px;
     }
     .elipse .elipse3 {
         width: 45px;
@@ -1308,7 +1306,7 @@ footer {
     }
     .elipse .elipse4 {
         width: 30px;
-        left: 190px;
+        left: 178px;
         top: 10px;
     }
 
@@ -1377,6 +1375,7 @@ figure {
 
 .figuregroup {
 	margin: -180px auto 70px;
+	padding-top: 25%;
 }
 
 
@@ -1385,34 +1384,26 @@ figure .text-overlay {
 }
 
 figure img {
-        grid-area: 1/1;
-        width: 250px;
-        height: 150px;
-        margin-left: -50px;
-        filter: contrast(.8) brightness(.7);
-        place-self: end center;
-        transition: .5s;
-        object-fit: fill;
-        object-position: top;
-}
-
-figure:hover img {
-    grid-area: 1/1;
-    width: 270px;
-    height: 170px;
-    margin-left: -60px;
+	grid-area: 1/1;
+    width: 170%;
+    height: 70%;
     filter: contrast(.8) brightness(.7);
     place-self: end center;
     transition: .5s;
     object-fit: fill;
     object-position: top;
+}
+
+figure:hover img {
+    width: 180%;
+    height: 80%;
     filter: contrast(1) brightness(1);
 }
 
 figure .text-overlay1 {
     position: absolute;
     bottom: 25px;
-    left: 50%;
+    left: 48%;
     transform: translateX(-70%);
     color: white;
     font-size: 2em;
@@ -1424,7 +1415,7 @@ figure .text-overlay1 {
 figure .text-overlay2 {
     position: absolute;
     bottom: 25px;
-    left: 60%;
+    left: 58%;
     transform: translateX(-70%);
     color: white;
     font-size: 2em;
@@ -1448,7 +1439,7 @@ figure .text-overlay3 {
 figure .text-overlay4 {
     position: absolute;
     bottom: 25px;
-    left: 55%;
+    left: 50%;
     transform: translateX(-70%);
     color: white;
     font-size: 2em;
@@ -1460,7 +1451,7 @@ figure .text-overlay4 {
 figure .text-overlay5 {
     position: absolute;
     bottom: 25px;
-    left: 62%;
+    left: 58%;
     transform: translateX(-70%);
     color: white;
     font-size: 2em;
@@ -1468,6 +1459,7 @@ figure .text-overlay5 {
     opacity: 0;
     transition: opacity 0.5s;
 }
+
 
 figure:before {
         content: "";
@@ -1479,10 +1471,10 @@ figure:before {
         filter: brightness(.9);
         transition: .5s;
         border-radius: 100px;
-        right: -30px;
-        left: -50px;
-        top: 90px;
-        bottom: 55px;
+        right: -10%;
+        left: -20%;
+        top: 40%;
+        bottom: 20.6%;
         background-color: white;
 }
 
@@ -1499,7 +1491,256 @@ figure {
 
 }
 
-@media screen and (max-width: 900px) {
+/* iphone responsive */
+@media screen and (min-width: 390px) and (max-width: 480px) {
+	.elipse {
+        height: 1px;
+        margin: auto;
+    }
+    .elipse .elipse1 {
+        width: 30px;
+        top: 50px;
+        left: 65px;
+    }
+    .elipse .elipse2 {
+        width: 40px;
+        top: 45px;
+        left: 330px;
+    }
+    .elipse .elipse3 {
+        width: 45px;
+        top: 20px;
+        right: 50px;
+    }
+    .elipse .elipse4 {
+        width: 30px;
+        left: 210px;
+        top: 10px;
+    }
+	
+	.card-3d{
+		margin: -50px auto;
+		background-color: #1C1E32;
+		overflow: hidden;
+	}
+	
+	.card-3d .figuremain {
+		padding-top: 70px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; 
+		align-items: center; 
+	}
+	
+	.card-3d .figuremain h1 {
+		text-align: center;
+		font-size: 1.7em;
+		text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
+	}
+	
+	.figuregroup {
+		margin: -180px auto 70px;
+		padding-top: 25%;
+	}
+	
+	figure {
+		width: 280px;
+	}	
+	
+	figure .text-overlay {
+			font-size: 1.8em;
+	}
+	
+	figure img {
+		grid-area: 1/1;
+		width: 165%;
+		height: 65%;
+		filter: contrast(.8) brightness(.7);
+		place-self: end center;
+		transition: .5s;
+		object-fit: fill;
+		object-position: top;
+	}
+	
+	figure:hover img {
+		width: 172%;
+		height: 72%;
+		filter: contrast(1) brightness(1);
+	}
+
+	figure:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: top/cover;
+        transform-origin: bottom;
+        filter: brightness(.9);
+        transition: .5s;
+        border-radius: 100px;
+        right: -18%;
+        left: -19%;
+        top: 40%;
+        bottom: 19.3%;
+        background-color: white;
+}
+	
+	.figuregroup {
+		gap: 100px !important;
+		padding-bottom: 150px;
+	}
+	
+	figure {
+		top: 60px;
+		left: 165px;
+		margin: -100px !important;
+	}
+	
+	figure .text-overlay1 {
+		position: absolute;
+		bottom: 25px;
+		left: 48%;
+		transform: translateX(-70%);
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	
+	figure .text-overlay2 {
+		position: absolute;
+		bottom: 25px;
+		left: 58%;
+		transform: translateX(-70%);
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	
+	figure .text-overlay3 {
+		position: absolute;
+		bottom: 25px;
+		left: 55%;
+		transform: translateX(-70%);
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	
+	figure .text-overlay4 {
+		position: absolute;
+		bottom: 25px;
+		left: 50%;
+		transform: translateX(-70%);
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	
+	figure .text-overlay5 {
+		position: absolute;
+		bottom: 25px;
+		left: 58%;
+		transform: translateX(-70%);
+		color: white;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+}
+
+/* iphhone se dan 5 kebawah */
+@media screen and (min-width: 320px) and (max-width: 320px) {
+
+	.elipse {
+        height: 1px;
+        margin: auto;
+    }
+    .elipse .elipse1 {
+        width: 30px;
+        top: 40px;
+        left: 35px;
+    }
+    .elipse .elipse2 {
+        width: 40px;
+        top: 40px;
+        left: 255px;
+    }
+    .elipse .elipse3 {
+        width: 45px;
+        top: 10px;
+        right: 75px;
+    }
+    .elipse .elipse4 {
+        width: 30px;
+        left: 155px;
+        top: 5px;
+    }
+	.card-3d .figuremain h1 {
+		text-align: center;
+		font-size: 1.22em;
+		text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
+	}
+
+	figure:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: top/cover;
+        transform-origin: bottom;
+        filter: brightness(.9);
+        transition: .5s;
+        border-radius: 100px;
+        right: -5%;
+        left: -20%;
+        top: 40%;
+        bottom: 22%;
+        background-color: white;
+	}
+
+	figure {
+		width: 240px;
+	}
+	
+	.figuregroup {
+		margin: -180px auto 70px;
+		padding-top: 25%;
+	}
+	
+	
+	figure .text-overlay {
+			font-size: 1.8em;
+	}
+	
+	figure img {
+		grid-area: 1/1;
+		width: 170%;
+		height: 70%;
+		filter: contrast(.8) brightness(.7);
+		place-self: end center;
+		transition: .5s;
+		object-fit: fill;
+		object-position: top;
+	}
+	
+	figure:hover img {
+		width: 180%;
+		height: 80%;
+		filter: contrast(1) brightness(1);
+	}
+	
+}
+
+/* @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 10px);
     }
@@ -1509,4 +1750,4 @@ figure {
     .wrapper .carousel {
       grid-auto-columns:  calc(100%);
     }
-}
+} */
