@@ -967,6 +967,7 @@ body {
 /* Start Card 3D */
 .card-3d{
     margin: 0px auto;
+	padding: 50px 0 250px;
     background-color: #1C1E32;
 }
 
@@ -980,17 +981,17 @@ body {
 }
 
 .card-3d .figuremain h1 {
-    text-align: center;
+	text-align: center;
     font-size: 3em;
     text-shadow: 12px 12px 7px rgba(0, 0, 0, 0.5);
 }
-  
+
 figure {
-    position: relative;
-    width: 350px;
+	position: relative;
+    width: 500px;
     aspect-ratio: 1;
     margin: auto;
-    padding: 50px;
+    padding: 45px;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 100%;
@@ -999,11 +1000,12 @@ figure {
 }
 
 .figuregroup {
-	margin: -70px auto 70px;
+	margin: -150px auto;
 }
 
+
 figure:before {
-    content: "";
+	content: "";
     position: absolute;
     z-index: -1;
     inset: 0;
@@ -1011,18 +1013,18 @@ figure:before {
     transform-origin: bottom;
     filter: brightness(.9);
     transition: .5s;
-    border-radius: 100px;
-    right: -150px;
-    left: -190px;
-    top: 110px;
-    bottom: 58px;
+    border-radius: 150px;
+    right: -270px;
+    left: -310px;
+    top: 160px;
+    bottom: 60px;
     background-color: #ffffff;
 }
-  
+
 
 figure img {
-    grid-area: 1/1;
-    width: 200%;
+	grid-area: 1/1;
+    width: 210%;
     height: 100%;
     filter: contrast(.8) brightness(.7);
     place-self: end center;
@@ -1032,8 +1034,8 @@ figure img {
 }
 
 figure:hover img {
-    width: 210%;
-    height: 110%;
+	width: 225%;
+    height: 115%;
     filter: contrast(1) brightness(1);
 }
 
@@ -1041,86 +1043,112 @@ figure:hover::before {
     filter: brightness(.3);
 }
 
-figure .text-overlay1 {
+.text-overlay {
     position: absolute;
-    bottom: 25px;
-    left: 45%;
-    transform: translateX(-70%);
     color: white;
-    font-size: 2em;
-    font-weight: bold;
+    bottom: 12%;
+    left: 44%;
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.5s;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    width: 170%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 5;
 }
 
 figure .text-overlay2 {
-    position: absolute;
-    bottom: 25px;
-    left: 53%;
-    transform: translateX(-70%);
+	position: absolute;
     color: white;
+	bottom: 12%;
+	left: -41%;
     font-size: 2em;
     font-weight: bold;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s;text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    width: 170%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 figure .text-overlay3 {
     position: absolute;
-    bottom: 25px;
-    left: 48%;
-    transform: translateX(-70%);
+    bottom: 12%;
+    left: -41%;
     color: white;
     font-size: 2em;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.5s;
+	transition: opacity 0.5s;text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    width: 170%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-figure .text-overlay4 {
-    position: absolute;
-    bottom: 25px;
-    left: 48%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-figure .text-overlay5 {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-figure:hover .text-overlay1 {
-    opacity: 1;
-}
-
-figure:hover .text-overlay2 {
-    opacity: 1;
-}
-
-figure:hover .text-overlay3 {
-    opacity: 1;
-}
-
-figure:hover .text-overlay4 {
-    opacity: 1;
-}
-
-figure:hover .text-overlay5 {
+figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-overlay3{
     opacity: 1;
 }
 /* end card 3d */
+
+/* START POPUP CARD */
+.hidden { display: none !important; }
+.popup {
+    position: fixed;
+    top: 8%; 
+	left: 0;
+    width: 100%; 
+	height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.popup-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+	border-radius: 12px;
+}
+.close-btn {
+	position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #000;
+	z-index: 10000;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	height: auto !important;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+	background-size: cover;
+}
+/* END POPUP CARD */
+
 
   /* =============== section Footer ================ */
 footer {
@@ -1350,22 +1378,21 @@ footer {
 /* start gambar */
 
 .card-3d{
-    margin: -50px auto;
+    margin: -40px auto !important;
     background-color: #1C1E32;
 	overflow: hidden;
 }
 
 .card-3d .figuremain {
-    padding-top: 70px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center; 
     align-items: center; 
+	padding: 0 0 3em  !important;
 }
 
 .card-3d .figuremain h1 {
-    text-align: center;
-    font-size: 1.7em;
+	text-align: center;
+    font-size: 1.5em !important;
     text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
 }
 
@@ -1376,11 +1403,6 @@ figure {
 .figuregroup {
 	margin: -180px auto 70px;
 	padding-top: 25%;
-}
-
-
-figure .text-overlay {
-        font-size: 1.8em;
 }
 
 figure img {
@@ -1400,17 +1422,6 @@ figure:hover img {
     filter: contrast(1) brightness(1);
 }
 
-figure .text-overlay1 {
-    position: absolute;
-    bottom: 25px;
-    left: 48%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
 
 figure .text-overlay2 {
     position: absolute;
@@ -1428,30 +1439,6 @@ figure .text-overlay3 {
     position: absolute;
     bottom: 25px;
     left: 55%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-figure .text-overlay4 {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-figure .text-overlay5 {
-    position: absolute;
-    bottom: 25px;
-    left: 58%;
     transform: translateX(-70%);
     color: white;
     font-size: 2em;

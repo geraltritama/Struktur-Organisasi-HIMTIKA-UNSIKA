@@ -107,3 +107,107 @@ $(window).scroll(function(){
     })
    console.log(wScroll); 
 });
+
+
+// SWIPER SLIDER CARD
+// Data slide untuk masing-masing figure
+const sliderData = [
+    [
+        { img: "assets/img/card/bph/kahim.jpg", title: "#" },
+        { img: "assets/img/card/bph/wahim.png", title: "#" },
+        { img: "assets/img/card/bph/sekum.png", title: "#" },
+        { img: "assets/img/card/bph/wasekum.png", title: "#" },
+        { img: "assets/img/card/bph/bendum.png", title: "#" },
+        { img: "assets/img/card/bph/wabendum.png", title: "#" }
+    ],
+    [
+        { img: "assets/img/card/bph/kahim.jpg", title: "#" },
+        { img: "assets/img/card/bph/wahim.png", title: "#" },
+        { img: "assets/img/card/bph/sekum.png", title: "#" },
+        { img: "assets/img/card/bph/wasekum.png", title: "#" },
+        { img: "assets/img/card/bph/bendum.png", title: "#" },
+        { img: "assets/img/card/bph/wabendum.png", title: "#" }
+    ],
+    [
+        { img: "assets/img/card/bph/kahim.jpg", title: "#" },
+        { img: "assets/img/card/bph/wahim.png", title: "#" },
+        { img: "assets/img/card/bph/sekum.png", title: "#" },
+        { img: "assets/img/card/bph/wasekum.png", title: "#" },
+        { img: "assets/img/card/bph/bendum.png", title: "#" },
+        { img: "assets/img/card/bph/wabendum.png", title: "#" }
+    ],
+    [
+        { img: "assets/img/card/bph/kahim.jpg", title: "#" },
+        { img: "assets/img/card/bph/wahim.png", title: "#" },
+        { img: "assets/img/card/bph/sekum.png", title: "#" },
+        { img: "assets/img/card/bph/wasekum.png", title: "#" },
+        { img: "assets/img/card/bph/bendum.png", title: "#" },
+        { img: "assets/img/card/bph/wabendum.png", title: "#" }
+    ],
+    [
+        { img: "assets/img/card/bph/kahim.jpg", title: "#" },
+        { img: "assets/img/card/bph/wahim.png", title: "#" },
+        { img: "assets/img/card/bph/sekum.png", title: "#" },
+        { img: "assets/img/card/bph/wasekum.png", title: "#" },
+        { img: "assets/img/card/bph/bendum.png", title: "#" },
+        { img: "assets/img/card/bph/wabendum.png", title: "#" }
+    ]
+];
+
+// Fungsi untuk mengganti isi slider
+function updateSwiperContent(index) {
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+    // Kosongkan isi swiper-wrapper
+    swiperWrapper.innerHTML = "";
+
+    // Tambahkan slide berdasarkan data dari sliderData[index]
+    sliderData[index].forEach((item) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `
+            <img src="${item.img}" alt="${item.title}">
+            <p>${item.title}</p>
+        `;
+        swiperWrapper.appendChild(slide);
+    });
+
+    // Perbarui Swiper agar mengenali slide baru
+    swiperInstance.update();
+}
+
+// POPUP CARD
+document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("popup-slider");
+    const closeBtn = popup.querySelector(".close-btn");
+    const figures = document.querySelectorAll(".card-3d figure");
+
+    let swiperInstance;
+
+    figures.forEach((figure, index) => {
+        figure.addEventListener("click", () => {
+            // Tampilkan popup
+            popup.classList.remove("hidden");
+
+            // Perbarui konten Swiper sesuai figure yang diklik
+            updateSwiperContent(index);
+
+            // Geser ke slide pertama
+            swiperInstance.slideTo(0);
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
+
+    // Inisialisasi Swiper
+    swiperInstance = new Swiper(".swiper", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+});
+
