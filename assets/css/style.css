@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	display: none;
+  }
+  
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -198,100 +203,6 @@ body {
 .main-header .header-top{
 	position: relative;
 	transition: opacity 0.3s ease;
-}
-
-/* Live News */
-
-.live-news {
-    background: linear-gradient(to right, #320F48, #7A25AE);
-    position: fixed;
-    width: 115%;
-    height: 49px;
-    top: 0;
-    left: 0;
-}
-
-.live-news .rectangle {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 310.5px;
-    height: 49px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    box-shadow: #1C1E32;
-}
-
-.live-news .rectangle .rectangle-img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.live-news .rectangle .rectangle-shadow {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    z-index: 0;
-}
-
-.live-news .rectangle .kabinet-sinergis {
-    position: relative;
-    z-index: 2;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 20px;
-	font-family: "Figtree";
-}
-
-.live-news .rectangle .sinergis {
-    position: relative;
-    z-index: 2;
-    width: 57px;
-    height: 60px;
-    margin: 10px 30px 0 0;
-}
-
-.live-news .marquee {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-}
-
-.live-news .marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 20s linear infinite;
-    color: white;
-    align-content: center;
-    line-height: 49px;
-    font-size: 19px;
-    font-family: "Figtree";
-}
-
-.live-news .marquee span a {
-    color: white;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.live-news .marquee span:hover {
-    animation-play-state: paused;
-}
-
-.main-header .header-top .top{
-	position: relative;
 }
 
 /*=== Header Upper ===*/
@@ -1014,18 +925,18 @@ figure:before {
     filter: brightness(.9);
     transition: .5s;
     border-radius: 150px;
-    right: -270px;
+    right: -300px;
     left: -310px;
-    top: 160px;
-    bottom: 60px;
+    top: 130px;
+    bottom: 48px;
     background-color: #ffffff;
 }
 
 
 figure img {
 	grid-area: 1/1;
-    width: 210%;
-    height: 100%;
+    width: 175%;
+    height: 80%;
     filter: contrast(.8) brightness(.7);
     place-self: end center;
     transition: .5s;
@@ -1034,8 +945,8 @@ figure img {
 }
 
 figure:hover img {
-	width: 225%;
-    height: 115%;
+	width: 190%;
+    height: 90%;
     filter: contrast(1) brightness(1);
 }
 
@@ -1046,14 +957,14 @@ figure:hover::before {
 .text-overlay {
     position: absolute;
     color: white;
-    bottom: 12%;
-    left: 44%;
+    bottom: 9%;
+    left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.5s;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-    width: 170%;
+    width: 148%;
     height: 15%;
     display: flex;
     align-items: center;
@@ -1064,40 +975,7 @@ figure:hover::before {
     z-index: 5;
 }
 
-figure .text-overlay2 {
-	position: absolute;
-    color: white;
-	bottom: 12%;
-	left: -41%;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-    width: 170%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-figure .text-overlay3 {
-    position: absolute;
-    bottom: 12%;
-    left: -41%;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-	transition: opacity 0.5s;text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-    width: 170%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-overlay3{
     opacity: 1;
@@ -1119,9 +997,9 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
     z-index: 9999;
 }
 .popup-content {
-    position: relative;
+	position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     background: #fff;
 	border-radius: 12px;
 }
@@ -1131,11 +1009,11 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
     right: 10px;
     font-size: 40px;
     cursor: pointer;
-    color: #000;
+    color: #10a7ff;
 	z-index: 10000;
 }
 .swiper-slide {
-    display: flex;
+	display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1291,450 +1169,3 @@ footer {
 	color: #ffffffc2;
 	background-color: #000000b0;
   }
-  
-/* tablet responsive */
-@media (max-width: 768px) {
-    .paralax {
-        height: 400px;
-    }
-}
-
-
-/*mobile responsive*/
-@media (max-width: 480px) {
-/* start parallax */
-	.paralax-wrapper {
-		top: 300px;
-		height: 480px;
-	}
-    .paralax {
-		margin-top: -10px auto;
-        height: 240px;
-		overflow: hidden;
-    }
-
-    .elipse {
-        height: 1px;
-        margin: auto;
-    }
-    .elipse .elipse1 {
-        width: 30px;
-        top: 50px;
-        left: 55px;
-    }
-    .elipse .elipse2 {
-        width: 40px;
-        top: 45px;
-        left: 285px;
-    }
-    .elipse .elipse3 {
-        width: 45px;
-        top: 20px;
-        right: 55px;
-    }
-    .elipse .elipse4 {
-        width: 30px;
-        left: 178px;
-        top: 10px;
-    }
-
-    .heading {
-        width: auto;
-        padding: 20px 10px;
-        margin: 10px auto 20px;
-    }
-
-    .heading h1 {
-        font-size: 25px;
-		bottom: 20px;
-    }
-
-    .heading .logosinergi {
-        width: 100%;
-        top: 30px;
-        margin-top: -80px;
-    }
-
-    .heading .cahaya {
-        width: 70%;
-        top: 90px;
-    }
-
-    .pengurus {
-        width: 104%;
-        top: 50px;
-    }
-
-    .heading .overlay {
-        z-index: 10 ;
-        position: relative;
-        width: 3;
-        right: 100px;
-        bottom: 50px;
-        height: 100px;
-    }
-/* end parakax */
-
-/* start gambar */
-
-.card-3d{
-    margin: -40px auto !important;
-    background-color: #1C1E32;
-	overflow: hidden;
-}
-
-.card-3d .figuremain {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-	padding: 0 0 3em  !important;
-}
-
-.card-3d .figuremain h1 {
-	text-align: center;
-    font-size: 1.5em !important;
-    text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
-}
-
-figure {
-    width: 260px;
-}
-
-.figuregroup {
-	margin: -180px auto 70px;
-	padding-top: 25%;
-}
-
-figure img {
-	grid-area: 1/1;
-    width: 170%;
-    height: 70%;
-    filter: contrast(.8) brightness(.7);
-    place-self: end center;
-    transition: .5s;
-    object-fit: fill;
-    object-position: top;
-}
-
-figure:hover img {
-    width: 180%;
-    height: 80%;
-    filter: contrast(1) brightness(1);
-}
-
-
-figure .text-overlay2 {
-    position: absolute;
-    bottom: 25px;
-    left: 58%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-figure .text-overlay3 {
-    position: absolute;
-    bottom: 25px;
-    left: 55%;
-    transform: translateX(-70%);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-
-figure:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        background: top/cover;
-        transform-origin: bottom;
-        filter: brightness(.9);
-        transition: .5s;
-        border-radius: 100px;
-        right: -10%;
-        left: -20%;
-        top: 40%;
-        bottom: 20.6%;
-        background-color: white;
-}
-
-.figuregroup {
-    gap: 100px !important;
-	padding-bottom: 150px;
-}
-
-figure {
-    top: 60px;
-    left: 165px;
-    margin: -100px !important;
-}
-
-}
-
-/* iphone responsive */
-@media screen and (min-width: 390px) and (max-width: 480px) {
-	.elipse {
-        height: 1px;
-        margin: auto;
-    }
-    .elipse .elipse1 {
-        width: 30px;
-        top: 50px;
-        left: 65px;
-    }
-    .elipse .elipse2 {
-        width: 40px;
-        top: 45px;
-        left: 330px;
-    }
-    .elipse .elipse3 {
-        width: 45px;
-        top: 20px;
-        right: 50px;
-    }
-    .elipse .elipse4 {
-        width: 30px;
-        left: 210px;
-        top: 10px;
-    }
-	
-	.card-3d{
-		margin: -50px auto;
-		background-color: #1C1E32;
-		overflow: hidden;
-	}
-	
-	.card-3d .figuremain {
-		padding-top: 70px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center; 
-		align-items: center; 
-	}
-	
-	.card-3d .figuremain h1 {
-		text-align: center;
-		font-size: 1.7em;
-		text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
-	}
-	
-	.figuregroup {
-		margin: -180px auto 70px;
-		padding-top: 25%;
-	}
-	
-	figure {
-		width: 280px;
-	}	
-	
-	figure .text-overlay {
-			font-size: 1.8em;
-	}
-	
-	figure img {
-		grid-area: 1/1;
-		width: 165%;
-		height: 65%;
-		filter: contrast(.8) brightness(.7);
-		place-self: end center;
-		transition: .5s;
-		object-fit: fill;
-		object-position: top;
-	}
-	
-	figure:hover img {
-		width: 172%;
-		height: 72%;
-		filter: contrast(1) brightness(1);
-	}
-
-	figure:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        background: top/cover;
-        transform-origin: bottom;
-        filter: brightness(.9);
-        transition: .5s;
-        border-radius: 100px;
-        right: -18%;
-        left: -19%;
-        top: 40%;
-        bottom: 19.3%;
-        background-color: white;
-}
-	
-	.figuregroup {
-		gap: 100px !important;
-		padding-bottom: 150px;
-	}
-	
-	figure {
-		top: 60px;
-		left: 165px;
-		margin: -100px !important;
-	}
-	
-	figure .text-overlay1 {
-		position: absolute;
-		bottom: 25px;
-		left: 48%;
-		transform: translateX(-70%);
-		color: white;
-		font-size: 2em;
-		font-weight: bold;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-	
-	figure .text-overlay2 {
-		position: absolute;
-		bottom: 25px;
-		left: 58%;
-		transform: translateX(-70%);
-		color: white;
-		font-size: 2em;
-		font-weight: bold;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-	
-	figure .text-overlay3 {
-		position: absolute;
-		bottom: 25px;
-		left: 55%;
-		transform: translateX(-70%);
-		color: white;
-		font-size: 2em;
-		font-weight: bold;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-	
-	figure .text-overlay4 {
-		position: absolute;
-		bottom: 25px;
-		left: 50%;
-		transform: translateX(-70%);
-		color: white;
-		font-size: 2em;
-		font-weight: bold;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-	
-	figure .text-overlay5 {
-		position: absolute;
-		bottom: 25px;
-		left: 58%;
-		transform: translateX(-70%);
-		color: white;
-		font-size: 2em;
-		font-weight: bold;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-}
-
-/* iphhone se dan 5 kebawah */
-@media screen and (min-width: 320px) and (max-width: 320px) {
-
-	.elipse {
-        height: 1px;
-        margin: auto;
-    }
-    .elipse .elipse1 {
-        width: 30px;
-        top: 40px;
-        left: 35px;
-    }
-    .elipse .elipse2 {
-        width: 40px;
-        top: 40px;
-        left: 255px;
-    }
-    .elipse .elipse3 {
-        width: 45px;
-        top: 10px;
-        right: 75px;
-    }
-    .elipse .elipse4 {
-        width: 30px;
-        left: 155px;
-        top: 5px;
-    }
-	.card-3d .figuremain h1 {
-		text-align: center;
-		font-size: 1.22em;
-		text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
-	}
-
-	figure:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        background: top/cover;
-        transform-origin: bottom;
-        filter: brightness(.9);
-        transition: .5s;
-        border-radius: 100px;
-        right: -5%;
-        left: -20%;
-        top: 40%;
-        bottom: 22%;
-        background-color: white;
-	}
-
-	figure {
-		width: 240px;
-	}
-	
-	.figuregroup {
-		margin: -180px auto 70px;
-		padding-top: 25%;
-	}
-	
-	
-	figure .text-overlay {
-			font-size: 1.8em;
-	}
-	
-	figure img {
-		grid-area: 1/1;
-		width: 170%;
-		height: 70%;
-		filter: contrast(.8) brightness(.7);
-		place-self: end center;
-		transition: .5s;
-		object-fit: fill;
-		object-position: top;
-	}
-	
-	figure:hover img {
-		width: 180%;
-		height: 80%;
-		filter: contrast(1) brightness(1);
-	}
-	
-}
-
-/* @media screen and (max-width: 900px) {
-    .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 10px);
-    }
-}
-  
-@media screen and (max-width: 600px) {
-    .wrapper .carousel {
-      grid-auto-columns:  calc(100%);
-    }
-} */

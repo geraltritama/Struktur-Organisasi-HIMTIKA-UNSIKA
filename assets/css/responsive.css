@@ -108,3 +108,505 @@
 		text-align:center	
 	}
 }
+
+/* tablet responsive */
+@media (max-width: 768px) {
+	.paralax{
+		margin-top: -10px auto;
+		height: 300px;
+	}
+
+	.elipse {
+		height: 1px;
+		margin: auto;
+	}
+	.elipse .elipse1 {
+		width: 50px;
+		top: 50px;
+		left: 130px;
+	}
+	.elipse .elipse2 {
+		width: 40px;
+		top: 45px;
+		left: 285px;
+	}
+	.elipse .elipse3 {
+		width: 85px;
+		top: 20px;
+		right: 55px;
+	}
+	.elipse .elipse4 {
+		width: 30px;
+		left: 178px;
+		top: 10px;
+	}
+
+	.heading {
+		width: auto;
+		padding: 20px 10px;
+		margin: 10px auto 20px;
+	}
+
+	.heading h1 {
+		font-size: 55px;
+		bottom: 20px;
+	}
+
+	.heading .logosinergi {
+		width: 100%;
+		top: 30px;
+		margin-top: -80px;
+	}
+
+	.heading .cahaya {
+		width: 70%;
+		top: 90px;
+	}
+
+	.pengurus {
+		width: 104%;
+		top: 50px;
+	}
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 360px) {
+/* start parallax */
+.paralax-wrapper {
+	margin-top: -50px;
+	top: 300px;
+	height: 420px;
+}
+.paralax {
+	margin-top: -10px auto;
+	height: 240px;
+	overflow: hidden;
+}
+
+.elipse {
+	height: 1px;
+	margin: auto;
+}
+.elipse .elipse1 {
+	width: 30px;
+	top: 50px;
+	left: 55px;
+}
+.elipse .elipse2 {
+	width: 40px;
+	top: 45px;
+	left: 285px;
+}
+.elipse .elipse3 {
+	width: 45px;
+	top: 20px;
+	right: 55px;
+}
+.elipse .elipse4 {
+	width: 30px;
+	left: 178px;
+	top: 10px;
+}
+
+.heading {
+	width: auto;
+	padding: 20px 10px;
+	margin: 10px auto 20px;
+}
+
+.heading h1 {
+	font-size: 25px;
+	bottom: 20px;
+}
+
+.heading .logosinergi {
+	width: 100%;
+	top: 30px;
+	margin-top: -80px;
+}
+
+.heading .cahaya {
+	width: 70%;
+	top: 90px;
+}
+
+.pengurus {
+	width: 104%;
+	top: 50px;
+}
+
+.heading .overlay {
+	z-index: 10 ;
+	position: relative;
+	width: 3;
+	right: 100px;
+	bottom: 50px;
+	height: 100px;
+}
+/* end paralax */
+
+/* start gambar */
+
+.card-3d{
+	margin: 0 !important;
+	padding: 0;
+	background-color: #1C1E32;
+	overflow: hidden;
+}
+
+.card-3d .figuremain {
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	padding: 0 0 3em  !important;
+}
+
+.card-3d .figuremain h1 {
+	max-width: 300px;
+	text-align: center;
+	font-size: 1.5em !important;
+	text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
+	margin: 80px auto;
+}
+
+figure {
+	width: 260px;
+}
+
+.figuregroup {
+	margin-top: -250px;
+}
+
+figure img {
+	grid-area: 1/1;
+	width: 170%;
+	height: 70%;
+	filter: contrast(.8) brightness(.7);
+	place-self: end center;
+	transition: .5s;
+	object-fit: ;
+	object-position: top;
+	margin-right: 26px;
+}
+
+figure:hover img {
+	width: 180%;
+	height: 80%;
+	filter: contrast(1) brightness(1);
+}
+
+
+
+.text-overlay {
+    position: absolute;
+    color: white;
+	bottom: 17%;
+    left: 45%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    width: 113%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 5;
+}
+
+
+figure:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: top/cover;
+	transform-origin: bottom;
+	filter: brightness(.9);
+	transition: .5s;
+	border-radius: 80px;
+	right: -13%;
+	left: -25%;
+	top: 40%;
+	bottom: 17.4%;
+	background-color: white;
+}
+
+.figuregroup {
+	gap: 100px !important;
+	padding-bottom: 150px;
+}
+
+figure {
+	top: 60px;
+	left: 165px;
+	margin: -100px !important;
+}
+}
+
+/*mobile responsive*/
+@media screen and (min-width: 390px) and (max-width: 480px) {
+.paralax-wrapper {
+		margin-top: -50px;
+		top: 300px;
+		height: 420px;
+}
+.paralax {
+		margin-top: -10px auto;
+		height: 240px;
+		overflow: hidden;
+}
+.elipse {
+	height: 1px;
+	margin: auto;
+}
+.elipse .elipse1 {
+	width: 30px;
+	top: 50px;
+	left: 65px;
+}
+.elipse .elipse2 {
+	width: 40px;
+	top: 45px;
+	left: 330px;
+}
+.elipse .elipse3 {
+	width: 45px;
+	top: 20px;
+	right: 50px;
+}
+.elipse .elipse4 {
+	width: 30px;
+	left: 210px;
+	top: 10px;
+}
+.heading {
+	width: auto;
+	padding: 20px 10px;
+	margin: 10px auto 20px;
+}
+
+.heading h1 {
+	font-size: 25px;
+	bottom: 20px;
+}
+
+.heading .logosinergi {
+	width: 100%;
+	top: 30px;
+	margin-top: -80px;
+}
+
+.heading .cahaya {
+	width: 70%;
+	top: 90px;
+}
+
+.pengurus {
+	width: 104%;
+	top: 30px;
+}
+
+.heading .overlay {
+	z-index: 10 ;
+	position: relative;
+	width: 3;
+	right: 100px;
+	bottom: 50px;
+	height: 100px;
+}
+/* end paralax */
+
+.card-3d{
+	margin: -50px auto;
+	background-color: #1C1E32;
+	overflow: hidden;
+}
+
+.card-3d .figuremain {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+	align-items: center; 
+	padding: 0 0 !important;
+}
+
+.card-3d .figuremain h1 {
+	max-width: 300px;
+	text-align: center;
+	font-size: 1.5em !important;
+	text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
+	margin: 80px auto;
+}
+
+.figuregroup {
+	margin: -180px auto 70px;
+	padding-top: 25%;
+}
+
+figure {
+	width: 280px;
+}	
+
+figure .text-overlay {
+		font-size: 1.8em;
+}
+
+figure img {
+	grid-area: 1/1;
+	width: 165%;
+	height: 65%;
+	filter: contrast(.8) brightness(.7);
+	place-self: end center;
+	transition: .5s;
+	object-fit: fill;
+	object-position: top;
+	margin-right: 12px;
+}
+
+figure:hover img {
+	width: 172%;
+	height: 72%;
+	filter: contrast(1) brightness(1);
+}
+
+figure:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: top/cover;
+	transform-origin: bottom;
+	filter: brightness(.9);
+	transition: .5s;
+	border-radius: 100px;
+	right: -18%;
+	left: -23%;
+	top: 40%;
+	bottom: 16.15%;
+	background-color: white;
+}
+
+.figuregroup {
+	gap: 100px !important;
+	padding-bottom: 150px;
+}
+
+figure {
+	top: 60px;
+	left: 165px;
+	margin: -100px !important;
+}
+
+.text-overlay {
+	position: absolute;
+	color: white;
+	top: 69%;
+	left: 48%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.5s;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+	background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+	width: 110%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25em !important;
+	font-weight: bold;
+	text-align: center;
+	z-index: 5;
+}
+}
+
+
+
+
+/* iphhone se dan 5 kebawah */
+@media screen and (min-width: 320px) and (max-width: 320px) {
+
+	.elipse {
+        height: 1px;
+        margin: auto;
+    }
+    .elipse .elipse1 {
+        width: 30px;
+        top: 40px;
+        left: 35px;
+    }
+    .elipse .elipse2 {
+        width: 40px;
+        top: 40px;
+        left: 255px;
+    }
+    .elipse .elipse3 {
+        width: 45px;
+        top: 10px;
+        right: 75px;
+    }
+    .elipse .elipse4 {
+        width: 30px;
+        left: 155px;
+        top: 5px;
+    }
+	.card-3d .figuremain h1 {
+		text-align: center;
+		font-size: 1.22em;
+		text-shadow: 10px 9px 3.5px rgba(0, 0, 0, 0.5);
+	}
+
+	figure:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: top/cover;
+        transform-origin: bottom;
+        filter: brightness(.9);
+        transition: .5s;
+        border-radius: 100px;
+        right: -5%;
+        left: -20%;
+        top: 40%;
+        bottom: 22%;
+        background-color: white;
+	}
+
+	figure {
+		width: 240px;
+	}
+	
+	.figuregroup {
+		margin: -180px auto 70px;
+		padding-top: 25%;
+	}
+	
+	
+	figure .text-overlay {
+			font-size: 1.8em;
+	}
+	
+	figure img {
+		grid-area: 1/1;
+		width: 170%;
+		height: 70%;
+		filter: contrast(.8) brightness(.7);
+		place-self: end center;
+		transition: .5s;
+		object-fit: fill;
+		object-position: top;
+	}
+	
+	figure:hover img {
+		width: 180%;
+		height: 80%;
+		filter: contrast(1) brightness(1);
+	}
+	
+}
