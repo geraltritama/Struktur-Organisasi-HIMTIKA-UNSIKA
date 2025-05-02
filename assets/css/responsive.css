@@ -257,11 +257,16 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
 
 /*mobile responsive*/
 @media screen and (min-width: 375px) and (max-width: 480px) {
+	.header-upper{
+		margin-top: 2rem;
+	}
+	
 	.paralax-wrapper {
-			margin-top: -50px;
+			margin-top: 1px;
 			top: 300px;
 			height: 420px;
 	}
+
 	.paralax {
 			margin-top: -10px auto;
 			height: 240px;
@@ -430,6 +435,15 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
 
 @media screen and (min-width: 360px) and (max-width: 360px) {
 /* start parallax */
+.header-upper{
+	margin-top: 2rem;
+}
+
+.paralax-wrapper {
+		margin-top: 1px;
+		top: 300px;
+		height: 420px;
+}
 .paralax-wrapper {
 	margin-top: -50px;
 	top: 300px;
@@ -621,6 +635,15 @@ figure {
 
 /* iphhone se dan 5 kebawah */
 @media screen and (min-width: 320px) and (max-width: 320px) {
+	.header-upper{
+		margin-top: 2rem;
+	}
+	
+	.paralax-wrapper {
+			margin-top: 1px;
+			top: 300px;
+			height: 420px;
+	}
 .paralax-wrapper {
 		margin-top: -50px;
 		top: 300px;
