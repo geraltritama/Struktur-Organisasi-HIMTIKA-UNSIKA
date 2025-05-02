@@ -471,7 +471,7 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
 .elipse .elipse1 {
 	width: 30px;
 	top: 50px;
-	left: 55px;
+	left: 45px;
 }
 .elipse .elipse2 {
 	width: 40px;
@@ -481,7 +481,7 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
 .elipse .elipse3 {
 	width: 45px;
 	top: 20px;
-	right: 55px;
+	right: 65px;
 }
 .elipse .elipse4 {
 	width: 30px;
@@ -575,8 +575,6 @@ figure:hover img {
 	height: 80%;
 	filter: contrast(1) brightness(1);
 }
-
-
 
 .text-overlay {
     position: absolute;
