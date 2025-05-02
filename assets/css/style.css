@@ -200,11 +200,6 @@ body {
 	background-color:#252742;
 }
 
-.main-header .header-top{
-	position: relative;
-	transition: opacity 0.3s ease;
-}
-
 /*=== Header Upper ===*/
 .header-upper{
 	position: relative;

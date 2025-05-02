@@ -80,20 +80,6 @@
 		opacity:0;
 	}
 	
-	.header-top .live-news{
-		position: auto;	
-	}
-}
-
-@media only screen and (max-width: 599px){
-	.main-header .header-top .top-left{
-		display:none;	
-	}
-	
-	.main-header .header-top .top-right{
-		width:100%;
-		text-align:center	
-	}
 }
 
 /* tablet responsive */
