@@ -257,6 +257,15 @@ figure:hover .text-overlay, figure:hover .text-overlay2, figure:hover .text-over
 
 /*mobile responsive*/
 @media screen and (min-width: 375px) and (max-width: 480px) {
+	.header-upper{
+		margin-top: 2rem;
+	}
+	
+	.paralax-wrapper {
+			margin-top: 1px;
+			top: 300px;
+			height: 420px;
+	}
 	.paralax-wrapper {
 			margin-top: -50px;
 			top: 300px;
